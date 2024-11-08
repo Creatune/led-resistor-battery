@@ -65,20 +65,8 @@ function checkAndUpdateLED() {
     const led = document.getElementById('led');
     const battery = document.getElementById('battery');
     const resistor = document.getElementById('resistor');
-    /*if(isConnected(battery, led)) {
-        if(isDirectlyConnected(battery, led)) {
-            led.style.backgroundColor = 'yellow';
-            led.style.color = 'black';
-        } else {
-            led.style.backgroundColor = '#CCCC00';
-            led.style.color = 'black';
-        }
-    } else {
-        led.style.backgroundColor = 'black';
-        led.style.color = 'white';
-    }*/
     if(isConnected(battery, led)) {
-        if(isConnected(led, resistor)) {
+        if(isDirectlyConnected(led, resistor) && isDirectlyConnected(resistor, battery)) {
             led.style.backgroundColor = '#CCCC00';
             led.style.color = 'black';
         } else {
