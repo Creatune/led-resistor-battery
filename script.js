@@ -19,7 +19,7 @@ function createConnection(comp1, comp2) {
     const svg = document.getElementById('connections');
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     line.setAttribute('stroke', 'black');
-    line.setAttribute('stroke-width', '2');
+    line.setAttribute('stroke-width', '5');
     line.style.pointerEvents = 'auto';
     line.style.cursor = 'pointer';
     line.setAttribute('z-index', 1);
